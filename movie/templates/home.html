@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Home</h1>
+<div class="container">
+    <div class="row">
+{% for i in b %}
+ <div class="card col-sm-3" style="width:15rem;">
+  <img src="{{i.cover.url}}"height="200px"width="100%" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{i.name}}</h5>
+      <a href="{% url "view" i.id %}" class="btn btn-danger">view</a></td>
+    <a href="#" class="btn btn-primary">Now on amazon prime</a>
+  </div>
+</div>
+{% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Add</h1>
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input type="text" class="form-control" name="n" placeholder="Enter name">
+
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Description</label>
+    <input type="text" class="form-control" name="d" placeholder="Enter the description">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Cover</label>
+    <input type="file" class="form-control" name="c" placeholder="Enter the cover">
+  </div>
+
+  <div class="mb-3">
+    <input type="submit" class="btn btn-primary">
+  </div>
+</form>
+{% endblock %}

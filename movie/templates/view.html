@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+      <td>{{b.name}}</td></tr>
+        <tr><th>Description</th>
+  <td>{{b.desc}}</td></tr>
+
+  <tr>
+        <th>COVER</th>
+    <td><img src="{{b.cover.url}}" height="200px" width="300px"></td>
+
+        </tr>
+
+
+</table>
+{% endblock %}
